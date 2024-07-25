@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana
+
+    </title>
+    <style>
+        body, input{
+            font: normal 18px Arial;
+        }
+        #resultado{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dia da Semana</h1>
+    <hr/>
+    <span>Hoje é <span id="resultado"></span></span>
+    <script>
+        var agora = new Date()
+        var diaSemana = agora.getDay()
+        /*
+            0 = Domingo
+            1 = Segunda
+            2 = Terça
+            3 = Quarta
+            4 = Quinta
+            5 = Sexta
+            6 = Sábado
+        */
+        var resultado = window.document.querySelector("#resultado")
+        switch(diaSemana){
+            case 0:
+                resultado.innerHTML = 'Domingo'
+                break
+            case 1:
+                 resultado.innerHTML = 'Segunda'
+                 break
+            case 2:
+                resultado.innerHTML = 'Terça'
+                break
+            case 3:
+                 resultado.innerHTML = 'Quarta'
+                 break
+            case 4:
+                resultado.innerHTML = 'Quinta'
+                break
+            case 5:
+                 resultado.innerHTML = 'Sexta'
+                 break
+            case 6:
+                 resultado.innerHTML = 'sábado'
+                 break
+            default:
+                resultado.innerHTML = '[ERRO] Dia inválido'
+                break
+       }
+    </script>
+</body>
+</html>
